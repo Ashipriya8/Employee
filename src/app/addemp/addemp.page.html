@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Employee Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card">
+    <form #form="ngForm" (ngSubmit)="add(form)">
+<ion-item>
+  <ion-label>Employee Name</ion-label>
+  <ion-input name="empName" type="text"  ngModel required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Age</ion-label>
+  <ion-input name="age" type="number"  ngModel required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Date Of Birth</ion-label>
+  <ion-datetime name="birthDate" type="Date" displayFormat="MMM-DD-YYYY" ngModel required></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label>Qualification</ion-label>
+  <ion-input name="qual" type="text"  ngModel required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Experience</ion-label>
+  <ion-input name="experience" type="number"  ngModel required></ion-input>
+</ion-item>
+<ion-button classs="button" type="submit" [disabled]="form.invalid" expand="block">Add Employee Detail</ion-button>
+</form>
+</ion-card>
+</ion-content>
