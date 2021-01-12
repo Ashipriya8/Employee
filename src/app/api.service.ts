@@ -1,17 +1,14 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { async } from '@angular/core/testing';
-import { promise } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  token: any;
 
-  apiURL = 'http://localhost:3000/api/'; // API url
+  apiUrl = 'http://localhost:3000/api/'; // API url
 
   constructor(public http: HttpClient) { }
 
@@ -19,7 +16,7 @@ export class ApiService {
   addPost(data: any) {
     console.log('Submit post in api');
     console.log(data);
-    return this.http.post(this.apiURL + 'addemp', data);
+    return this.http.post(this.apiUrl,'addemp',data);
   }
 }
 

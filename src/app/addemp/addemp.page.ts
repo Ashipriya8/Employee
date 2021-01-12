@@ -15,8 +15,8 @@ export class AddempPage implements OnInit {
   }
   add(data: any) {
     console.log(data.form.value);
-    this.api.addPost(data.form.value).subscribe(response => {
-      console.log(response);
+    this.api.addPost(data.form.value).subscribe(Response=> {
+      console.log(Response);
       
     });
 }

@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'viewemp',
     loadChildren: () => import('./viewemp/viewemp.module').then( m => m.ViewempPageModule)
   },
+  {
+    path: 'editemp',
+    loadChildren: () => import('./editemp/editemp.module').then( m => m.EditempPageModule)
+  },
+  {
+    path: 'deleteemp',
+    loadChildren: () => import('./deleteemp/deleteemp.module').then( m => m.DeleteempPageModule)
+  },
 ];
 
 @NgModule({
